@@ -1,11 +1,99 @@
 const fs = require("fs")
-const util = require("util")
+const chalk = require("chalk")
+const Path = require("path")
+const { spawn } = require("child_process")
 
 const createDir = path => {
     if (fs.existsSync(path)) return
-    return util.promisify(fs.mkdir)(path)
+    return new Promise((resolve, reject) => fs.mkdir(path, 0o777, error => {
+        if (error)
+            reject(error)
+        else
+            resolve(path)
+    }))
 }
 
-module.exports = async (config) => {
-    await createDir(config.path)
+const createJSON = config => new Promise((resolve, reject) => {
+    const packageJSON = {
+        name: config.name,
+        version: "0.1.0",
+        description: "",
+        main: "index.js",
+        scripts: {
+            "test": "echo \"Error: no test specified\" && exit 1"
+        },
+        author: "",
+        license: "ISC"
+    }
+    try {
+        const json = JSON.stringify(packageJSON)
+        fs.writeFile(Path.join(config.path, "packageJSON.json"), json, err => err ? reject(err) : resolve())
+    } catch (e) {
+        return reject(e)
+    }
+})
+
+const exampleGenerator = path => new Promise(((resolve, reject) => {
+    const init = spawn("react-native", ["init", "example"], {
+        cwd: path
+    })
+    init.on('close', code => resolve(code))
+    init.on('exit', code => resolve(code))
+    init.on('error', error => reject(error))
+}))
+
+const moduleGenerator = config => new Promise((resolve, reject) => {
+    const bridge = spawn("react-native", ["new-module"], {
+        cwd: Path.join(__dirname, "../template")
+    })
+    bridge.stdout.on('data', question => {
+        switch (question) {
+            case "What is your bridge module called?":
+                bridge.stdin.write(config.name)
+                break
+            case "What type of bridge would you like to create?":
+                bridge.stdin.write("")
+                break
+            case "What OS & languages would you like to support?":
+                bridge.stdin.write("")
+                break
+            case "What directory should we deliver your JS files to?":
+                bridge.stdin.write(config.path)
+                break
+            default:
+                break
+        }
+    })
+    bridge.stderr.on('data', (data) => console.error(`stderr: ${data}`))
+    bridge.on('close', code => {
+        bridge.stdin.end()
+        resolve(code)
+    })
+    bridge.on('exit', code => resolve(code))
+    bridge.on('error', error => reject(error))
+})
+
+module.exports = async config => {
+    try {
+        await createDir(config.path) // 项目目录
+        switch (config.type) {
+            case "ios":
+                await createDir(Path.join(config.path, "ios")) // iOS 目录
+                break
+            case "android":
+                await createDir(Path.join(config.path, "android")) // android 目录
+                break
+            default:
+                await createDir(Path.join(config.path, "ios"))
+                await createDir(Path.join(config.path, "android"))
+                break
+        }
+        await createJSON(config)
+        console.log(chalk.black.bgGreenBright.bold("创建示例项目中"))
+        await exampleGenerator(config.path)
+        console.log(chalk.black.bgGreenBright.bold("创建完毕"))
+        await moduleGenerator(config)
+    } catch (e) {
+        console.error(e)
+    }
 }
