@@ -1,0 +1,27 @@
+{
+  "name": "rn-module-creator",
+  "version": "0.1.0",
+  "description": "a npm package generator for react-native project",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react-native",
+    "Objective-c",
+    "Swift",
+    "Java",
+    "Kotlin"
+  ],
+  "author": "Daubert",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "promise-retry": "^1.1.1",
+    "react-native-create-bridge": "^2.0.1"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
+}
