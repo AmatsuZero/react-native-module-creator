@@ -1,0 +1,3 @@
+[submodule "XcodeHelper/XcodeEditor"]
+	path = XcodeHelper/XcodeEditor
+	url = https://github.com/appsquickly/XcodeEditor.git

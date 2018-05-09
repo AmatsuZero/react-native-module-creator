@@ -1,8 +1,6 @@
 const fs = require("fs")
-const chalk = require("chalk")
 const Path = require("path")
 const { spawn } = require("child_process")
-const readLine = require("readline")
 
 const createDir = path => {
     if (fs.existsSync(path)) return
@@ -81,9 +79,9 @@ module.exports = async config => {
                 break
         }
         await createJSON(config)
-        // console.log(chalk.black.bgGreenBright.bold("创建示例项目中"))
-        // await exampleGenerator(config.path)
-        // console.log(chalk.black.bgGreenBright.bold("创建完毕"))
+        console.log(chalk.black.bgGreenBright.bold("创建示例项目中"))
+        await exampleGenerator(config.path)
+        console.log(chalk.black.bgGreenBright.bold("创建完毕"))
         await moduleGenerator(config)
     } catch (e) {
         console.error(e)

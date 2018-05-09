@@ -4,8 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
-    "postinstall": "pushd template && npm i && popd"
+    "test": "jest"
   },
   "dependencies": {
     "react": "16.3.1",
