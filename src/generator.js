@@ -2,6 +2,7 @@ const fs = require("fs")
 const chalk = require("chalk")
 const Path = require("path")
 const { spawn } = require("child_process")
+const readLine = require("readline")
 
 const createDir = path => {
     if (fs.existsSync(path)) return
@@ -27,7 +28,7 @@ const createJSON = config => new Promise((resolve, reject) => {
     }
     try {
         const json = JSON.stringify(packageJSON)
-        fs.writeFile(Path.join(config.path, "packageJSON.json"), json, err => err ? reject(err) : resolve())
+        fs.writeFile(Path.join(config.path, "package.json"), json, err => err ? reject(err) : resolve())
     } catch (e) {
         return reject(e)
     }
@@ -44,31 +45,22 @@ const exampleGenerator = path => new Promise(((resolve, reject) => {
 
 const moduleGenerator = config => new Promise((resolve, reject) => {
     const bridge = spawn("react-native", ["new-module"], {
-        cwd: Path.join(__dirname, "../template")
+        cwd: Path.join(__dirname, "../template"),
+        stdio: 'pipe'
     })
-    bridge.stdout.on('data', question => {
-        switch (question) {
-            case "What is your bridge module called?":
-                bridge.stdin.write(config.name)
-                break
-            case "What type of bridge would you like to create?":
-                bridge.stdin.write("")
-                break
-            case "What OS & languages would you like to support?":
-                bridge.stdin.write("")
-                break
-            case "What directory should we deliver your JS files to?":
-                bridge.stdin.write(config.path)
-                break
-            default:
-                break
-        }
+    bridge.stdout.on('data', value => {
+        const question = value.toString()
+        if (question.includes("What is your bridge module called?"))
+            bridge.stdin.write(config.name + "\n")
+        else if (question.includes("What type of bridge would you like to create?"))
+            bridge.stdin.write("\n")
+        else if (question.includes("What OS & languages would you like to support?")) {
+            bridge.stdin.write("\n")
+        } else if (question.includes("What directory should we deliver your JS files to?"))
+            bridge.stdin.write(config.path + "\n")
     })
-    bridge.stderr.on('data', (data) => console.error(`stderr: ${data}`))
-    bridge.on('close', code => {
-        bridge.stdin.end()
-        resolve(code)
-    })
+    bridge.stderr.on('data', data => console.error(`stderr: ${data}`))
+    bridge.on('close', code => resolve(code))
     bridge.on('exit', code => resolve(code))
     bridge.on('error', error => reject(error))
 })
@@ -89,9 +81,9 @@ module.exports = async config => {
                 break
         }
         await createJSON(config)
-        console.log(chalk.black.bgGreenBright.bold("创建示例项目中"))
-        await exampleGenerator(config.path)
-        console.log(chalk.black.bgGreenBright.bold("创建完毕"))
+        // console.log(chalk.black.bgGreenBright.bold("创建示例项目中"))
+        // await exampleGenerator(config.path)
+        // console.log(chalk.black.bgGreenBright.bold("创建完毕"))
         await moduleGenerator(config)
     } catch (e) {
         console.error(e)
