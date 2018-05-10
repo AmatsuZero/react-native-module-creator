@@ -1,6 +1,7 @@
 const fs = require("fs")
 const Path = require("path")
 const { spawn } = require("child_process")
+const { promisify } = require("util")
 
 const createDir = path => {
     if (fs.existsSync(path)) return
@@ -44,7 +45,8 @@ const exampleGenerator = path => new Promise(((resolve, reject) => {
 const moduleGenerator = config => new Promise((resolve, reject) => {
     const bridge = spawn("react-native", ["new-module"], {
         cwd: Path.join(__dirname, "../template"),
-        stdio: 'pipe'
+        stdio: 'pipe',
+        removeHistoryDuplicates: true
     })
     bridge.stdout.on('data', value => {
         const question = value.toString()
@@ -63,6 +65,21 @@ const moduleGenerator = config => new Promise((resolve, reject) => {
     bridge.on('error', error => reject(error))
 })
 
+const modifyExampleJSON = async (path, name) => {
+    const readFile = promisify(fs.readFile)
+    const writeFile = promisify(fs.writeFile)
+    try {
+        const data = await readFile(path, 'utf8')
+        const packageJSON = JSON.parse(data)
+        const dependencies = packageJSON["dependencies"]
+        dependencies[name] = "file:.."
+        const jsonStr = JSON.stringify(packageJSON)
+        await writeFile(path, jsonStr, 'utf8')
+    } catch (e) {
+        throw e
+    }
+}
+
 module.exports = async config => {
     try {
         await createDir(config.path) // 项目目录
@@ -79,9 +96,13 @@ module.exports = async config => {
                 break
         }
         await createJSON(config)
+        // 生成示例项目
         console.log(chalk.black.bgGreenBright.bold("创建示例项目中"))
         await exampleGenerator(config.path)
         console.log(chalk.black.bgGreenBright.bold("创建完毕"))
+        // 修改example的package.json
+        await modifyExampleJSON(Path.join(config.path, "example"), config.name)
+        // 生成对应文件
         await moduleGenerator(config)
     } catch (e) {
         console.error(e)

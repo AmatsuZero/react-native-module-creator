@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		215BCE0720A3F961007AB4C2 /* RNProjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BCE0620A3F961007AB4C2 /* RNProjectConfig.m */; };
+		215BCE1A20A41DCF007AB4C2 /* RNCarthageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BCE1920A41DCF007AB4C2 /* RNCarthageHelper.m */; };
 		2173F85720A2EE65000C2307 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2173F85620A2EE65000C2307 /* main.m */; };
 		2173F85F20A30226000C2307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2173F85E20A30226000C2307 /* Foundation.framework */; };
 		2173F86920A30235000C2307 /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2173F86620A3022F000C2307 /* XcodeEditor.framework */; };
@@ -42,6 +44,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		215BCE0520A3F961007AB4C2 /* RNProjectConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNProjectConfig.h; sourceTree = "<group>"; };
+		215BCE0620A3F961007AB4C2 /* RNProjectConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNProjectConfig.m; sourceTree = "<group>"; };
+		215BCE1820A41DCF007AB4C2 /* RNCarthageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCarthageHelper.h; sourceTree = "<group>"; };
+		215BCE1920A41DCF007AB4C2 /* RNCarthageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNCarthageHelper.m; sourceTree = "<group>"; };
 		2173F85320A2EE65000C2307 /* XcodeHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XcodeHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		2173F85620A2EE65000C2307 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2173F85E20A30226000C2307 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -82,6 +88,10 @@
 			isa = PBXGroup;
 			children = (
 				2173F85620A2EE65000C2307 /* main.m */,
+				215BCE0520A3F961007AB4C2 /* RNProjectConfig.h */,
+				215BCE0620A3F961007AB4C2 /* RNProjectConfig.m */,
+				215BCE1820A41DCF007AB4C2 /* RNCarthageHelper.h */,
+				215BCE1920A41DCF007AB4C2 /* RNCarthageHelper.m */,
 			);
 			path = XcodeHelper;
 			sourceTree = "<group>";
@@ -184,6 +194,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2173F85720A2EE65000C2307 /* main.m in Sources */,
+				215BCE1A20A41DCF007AB4C2 /* RNCarthageHelper.m in Sources */,
+				215BCE0720A3F961007AB4C2 /* RNProjectConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

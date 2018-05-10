@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <XcodeEditor/XcodeEditor.h>
+#import "RNProjectConfig.h"
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
-        NSLog(@"Hello, World!");
+        NSString* json = [[NSProcessInfo processInfo].arguments firstObject];
+        if (!json) {
+            return -10080;
+        }
+        RNProjectConfig* config = [[RNProjectConfig alloc] initWithJSON:json];
     }
     return 0;
 }
