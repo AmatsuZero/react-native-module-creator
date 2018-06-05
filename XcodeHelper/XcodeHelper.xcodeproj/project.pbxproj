@@ -11,20 +11,21 @@
 		215BCE1A20A41DCF007AB4C2 /* RNCarthageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BCE1920A41DCF007AB4C2 /* RNCarthageHelper.m */; };
 		2173F85720A2EE65000C2307 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2173F85620A2EE65000C2307 /* main.m */; };
 		2173F85F20A30226000C2307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2173F85E20A30226000C2307 /* Foundation.framework */; };
-		2173F86920A30235000C2307 /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2173F86620A3022F000C2307 /* XcodeEditor.framework */; };
+		8095ECE920C6BE50009E400E /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8095ECE620C6BE14009E400E /* XcodeEditor.framework */; };
+		8095ECEC20C6BEB2009E400E /* RNSubmoduleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8095ECEB20C6BEB2009E400E /* RNSubmoduleHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2173F86520A3022F000C2307 /* PBXContainerItemProxy */ = {
+		8095ECE520C6BE14009E400E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2173F86020A3022F000C2307 /* XcodeEditor.xcodeproj */;
+			containerPortal = 8095ECE020C6BE14009E400E /* XcodeEditor.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6BE8FDAD1C01C190001EF5B3;
 			remoteInfo = XcodeEditor;
 		};
-		2173F86720A3022F000C2307 /* PBXContainerItemProxy */ = {
+		8095ECE720C6BE14009E400E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2173F86020A3022F000C2307 /* XcodeEditor.xcodeproj */;
+			containerPortal = 8095ECE020C6BE14009E400E /* XcodeEditor.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6BE8FDB71C01C190001EF5B3;
 			remoteInfo = XcodeEditorTests;
@@ -51,7 +52,9 @@
 		2173F85320A2EE65000C2307 /* XcodeHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XcodeHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		2173F85620A2EE65000C2307 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2173F85E20A30226000C2307 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2173F86020A3022F000C2307 /* XcodeEditor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XcodeEditor.xcodeproj; path = XcodeEditor/XcodeEditor.xcodeproj; sourceTree = "<group>"; };
+		8095ECE020C6BE14009E400E /* XcodeEditor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XcodeEditor.xcodeproj; path = ../XcodeEditor/XcodeEditor.xcodeproj; sourceTree = "<group>"; };
+		8095ECEA20C6BEB2009E400E /* RNSubmoduleHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSubmoduleHelper.h; sourceTree = "<group>"; };
+		8095ECEB20C6BEB2009E400E /* RNSubmoduleHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSubmoduleHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2173F86920A30235000C2307 /* XcodeEditor.framework in Frameworks */,
+				8095ECE920C6BE50009E400E /* XcodeEditor.framework in Frameworks */,
 				2173F85F20A30226000C2307 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,6 +95,8 @@
 				215BCE0620A3F961007AB4C2 /* RNProjectConfig.m */,
 				215BCE1820A41DCF007AB4C2 /* RNCarthageHelper.h */,
 				215BCE1920A41DCF007AB4C2 /* RNCarthageHelper.m */,
+				8095ECEA20C6BEB2009E400E /* RNSubmoduleHelper.h */,
+				8095ECEB20C6BEB2009E400E /* RNSubmoduleHelper.m */,
 			);
 			path = XcodeHelper;
 			sourceTree = "<group>";
@@ -99,17 +104,17 @@
 		2173F85D20A30225000C2307 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				2173F86020A3022F000C2307 /* XcodeEditor.xcodeproj */,
+				8095ECE020C6BE14009E400E /* XcodeEditor.xcodeproj */,
 				2173F85E20A30226000C2307 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2173F86120A3022F000C2307 /* Products */ = {
+		8095ECE120C6BE14009E400E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2173F86620A3022F000C2307 /* XcodeEditor.framework */,
-				2173F86820A3022F000C2307 /* XcodeEditorTests.xctest */,
+				8095ECE620C6BE14009E400E /* XcodeEditor.framework */,
+				8095ECE820C6BE14009E400E /* XcodeEditorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -160,8 +165,8 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 2173F86120A3022F000C2307 /* Products */;
-					ProjectRef = 2173F86020A3022F000C2307 /* XcodeEditor.xcodeproj */;
+					ProductGroup = 8095ECE120C6BE14009E400E /* Products */;
+					ProjectRef = 8095ECE020C6BE14009E400E /* XcodeEditor.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -172,18 +177,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		2173F86620A3022F000C2307 /* XcodeEditor.framework */ = {
+		8095ECE620C6BE14009E400E /* XcodeEditor.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = XcodeEditor.framework;
-			remoteRef = 2173F86520A3022F000C2307 /* PBXContainerItemProxy */;
+			remoteRef = 8095ECE520C6BE14009E400E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		2173F86820A3022F000C2307 /* XcodeEditorTests.xctest */ = {
+		8095ECE820C6BE14009E400E /* XcodeEditorTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = XcodeEditorTests.xctest;
-			remoteRef = 2173F86720A3022F000C2307 /* PBXContainerItemProxy */;
+			remoteRef = 8095ECE720C6BE14009E400E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -195,6 +200,7 @@
 			files = (
 				2173F85720A2EE65000C2307 /* main.m in Sources */,
 				215BCE1A20A41DCF007AB4C2 /* RNCarthageHelper.m in Sources */,
+				8095ECEC20C6BEB2009E400E /* RNSubmoduleHelper.m in Sources */,
 				215BCE0720A3F961007AB4C2 /* RNProjectConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

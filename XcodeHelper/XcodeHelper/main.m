@@ -16,7 +16,7 @@ int main(int argc, const char * argv[]) {
         if (!json) {
             return -10080;
         }
-        RNProjectConfig* config = [[RNProjectConfig alloc] initWithJSON:json];
+       __unused RNProjectConfig* config = [[RNProjectConfig alloc] initWithJSON:json];
     }
     return 0;
 }
