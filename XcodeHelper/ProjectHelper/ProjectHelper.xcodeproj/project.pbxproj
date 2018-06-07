@@ -7,25 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		215BCE0720A3F961007AB4C2 /* RNProjectConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BCE0620A3F961007AB4C2 /* RNProjectConfig.m */; };
-		215BCE1A20A41DCF007AB4C2 /* RNCarthageHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 215BCE1920A41DCF007AB4C2 /* RNCarthageHelper.m */; };
-		2173F85720A2EE65000C2307 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2173F85620A2EE65000C2307 /* main.m */; };
-		2173F85F20A30226000C2307 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2173F85E20A30226000C2307 /* Foundation.framework */; };
-		8095ECE920C6BE50009E400E /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8095ECE620C6BE14009E400E /* XcodeEditor.framework */; };
-		8095ECEC20C6BEB2009E400E /* RNSubmoduleHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 8095ECEB20C6BEB2009E400E /* RNSubmoduleHelper.m */; };
+		8095ED4020C7BBD2009E400E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8095ED3F20C7BBD2009E400E /* main.swift */; };
+		8095ED4820C7C808009E400E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8095ED4720C7C808009E400E /* Foundation.framework */; };
+		8095ED5320C7C882009E400E /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8095ED4F20C7C814009E400E /* XcodeEditor.framework */; };
+		8095ED5620C7C8F6009E400E /* RNProjectConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8095ED5520C7C8F6009E400E /* RNProjectConfig.swift */; };
+		8095ED5820C7D873009E400E /* RNSubmoduleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8095ED5720C7D873009E400E /* RNSubmoduleHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		8095ECE520C6BE14009E400E /* PBXContainerItemProxy */ = {
+		8095ED4E20C7C814009E400E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8095ECE020C6BE14009E400E /* XcodeEditor.xcodeproj */;
+			containerPortal = 8095ED4920C7C814009E400E /* XcodeEditor.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6BE8FDAD1C01C190001EF5B3;
 			remoteInfo = XcodeEditor;
 		};
-		8095ECE720C6BE14009E400E /* PBXContainerItemProxy */ = {
+		8095ED5020C7C814009E400E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 8095ECE020C6BE14009E400E /* XcodeEditor.xcodeproj */;
+			containerPortal = 8095ED4920C7C814009E400E /* XcodeEditor.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 6BE8FDB71C01C190001EF5B3;
 			remoteInfo = XcodeEditorTests;
@@ -33,7 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		2173F85120A2EE65000C2307 /* CopyFiles */ = {
+		8095ED3A20C7BBD2009E400E /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -45,84 +44,76 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		215BCE0520A3F961007AB4C2 /* RNProjectConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNProjectConfig.h; sourceTree = "<group>"; };
-		215BCE0620A3F961007AB4C2 /* RNProjectConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNProjectConfig.m; sourceTree = "<group>"; };
-		215BCE1820A41DCF007AB4C2 /* RNCarthageHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNCarthageHelper.h; sourceTree = "<group>"; };
-		215BCE1920A41DCF007AB4C2 /* RNCarthageHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNCarthageHelper.m; sourceTree = "<group>"; };
-		2173F85320A2EE65000C2307 /* XcodeHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = XcodeHelper; sourceTree = BUILT_PRODUCTS_DIR; };
-		2173F85620A2EE65000C2307 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		2173F85E20A30226000C2307 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		8095ECE020C6BE14009E400E /* XcodeEditor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XcodeEditor.xcodeproj; path = ../XcodeEditor/XcodeEditor.xcodeproj; sourceTree = "<group>"; };
-		8095ECEA20C6BEB2009E400E /* RNSubmoduleHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RNSubmoduleHelper.h; sourceTree = "<group>"; };
-		8095ECEB20C6BEB2009E400E /* RNSubmoduleHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RNSubmoduleHelper.m; sourceTree = "<group>"; };
+		8095ED3C20C7BBD2009E400E /* ProjectHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectHelper; sourceTree = BUILT_PRODUCTS_DIR; };
+		8095ED3F20C7BBD2009E400E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8095ED4720C7C808009E400E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		8095ED4920C7C814009E400E /* XcodeEditor.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = XcodeEditor.xcodeproj; path = ../../XcodeEditor/XcodeEditor.xcodeproj; sourceTree = "<group>"; };
+		8095ED5520C7C8F6009E400E /* RNProjectConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNProjectConfig.swift; sourceTree = "<group>"; };
+		8095ED5720C7D873009E400E /* RNSubmoduleHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNSubmoduleHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2173F85020A2EE65000C2307 /* Frameworks */ = {
+		8095ED3920C7BBD2009E400E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8095ECE920C6BE50009E400E /* XcodeEditor.framework in Frameworks */,
-				2173F85F20A30226000C2307 /* Foundation.framework in Frameworks */,
+				8095ED5320C7C882009E400E /* XcodeEditor.framework in Frameworks */,
+				8095ED4820C7C808009E400E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2173F84A20A2EE65000C2307 = {
+		8095ED3320C7BBD2009E400E = {
 			isa = PBXGroup;
 			children = (
-				2173F85520A2EE65000C2307 /* XcodeHelper */,
-				2173F85420A2EE65000C2307 /* Products */,
-				2173F85D20A30225000C2307 /* Frameworks */,
+				8095ED3E20C7BBD2009E400E /* ProjectHelper */,
+				8095ED3D20C7BBD2009E400E /* Products */,
+				8095ED4620C7C807009E400E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		2173F85420A2EE65000C2307 /* Products */ = {
+		8095ED3D20C7BBD2009E400E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				2173F85320A2EE65000C2307 /* XcodeHelper */,
+				8095ED3C20C7BBD2009E400E /* ProjectHelper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2173F85520A2EE65000C2307 /* XcodeHelper */ = {
+		8095ED3E20C7BBD2009E400E /* ProjectHelper */ = {
 			isa = PBXGroup;
 			children = (
-				8095ECED20C6BF43009E400E /* GitSubmodule */,
-				2173F85620A2EE65000C2307 /* main.m */,
-				215BCE0520A3F961007AB4C2 /* RNProjectConfig.h */,
-				215BCE0620A3F961007AB4C2 /* RNProjectConfig.m */,
-				215BCE1820A41DCF007AB4C2 /* RNCarthageHelper.h */,
-				215BCE1920A41DCF007AB4C2 /* RNCarthageHelper.m */,
+				8095ED5420C7C8CF009E400E /* GitSubmodule */,
+				8095ED3F20C7BBD2009E400E /* main.swift */,
+				8095ED5520C7C8F6009E400E /* RNProjectConfig.swift */,
 			);
-			path = XcodeHelper;
+			path = ProjectHelper;
 			sourceTree = "<group>";
 		};
-		2173F85D20A30225000C2307 /* Frameworks */ = {
+		8095ED4620C7C807009E400E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8095ECE020C6BE14009E400E /* XcodeEditor.xcodeproj */,
-				2173F85E20A30226000C2307 /* Foundation.framework */,
+				8095ED4920C7C814009E400E /* XcodeEditor.xcodeproj */,
+				8095ED4720C7C808009E400E /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		8095ECE120C6BE14009E400E /* Products */ = {
+		8095ED4A20C7C814009E400E /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8095ECE620C6BE14009E400E /* XcodeEditor.framework */,
-				8095ECE820C6BE14009E400E /* XcodeEditorTests.xctest */,
+				8095ED4F20C7C814009E400E /* XcodeEditor.framework */,
+				8095ED5120C7C814009E400E /* XcodeEditorTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8095ECED20C6BF43009E400E /* GitSubmodule */ = {
+		8095ED5420C7C8CF009E400E /* GitSubmodule */ = {
 			isa = PBXGroup;
 			children = (
-				8095ECEA20C6BEB2009E400E /* RNSubmoduleHelper.h */,
-				8095ECEB20C6BEB2009E400E /* RNSubmoduleHelper.m */,
+				8095ED5720C7D873009E400E /* RNSubmoduleHelper.swift */,
 			);
 			path = GitSubmodule;
 			sourceTree = "<group>";
@@ -130,93 +121,93 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2173F85220A2EE65000C2307 /* XcodeHelper */ = {
+		8095ED3B20C7BBD2009E400E /* ProjectHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2173F85A20A2EE65000C2307 /* Build configuration list for PBXNativeTarget "XcodeHelper" */;
+			buildConfigurationList = 8095ED4320C7BBD2009E400E /* Build configuration list for PBXNativeTarget "ProjectHelper" */;
 			buildPhases = (
-				2173F84F20A2EE65000C2307 /* Sources */,
-				2173F85020A2EE65000C2307 /* Frameworks */,
-				2173F85120A2EE65000C2307 /* CopyFiles */,
+				8095ED3820C7BBD2009E400E /* Sources */,
+				8095ED3920C7BBD2009E400E /* Frameworks */,
+				8095ED3A20C7BBD2009E400E /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = XcodeHelper;
-			productName = XcodeHelper;
-			productReference = 2173F85320A2EE65000C2307 /* XcodeHelper */;
+			name = ProjectHelper;
+			productName = ProjectHelper;
+			productReference = 8095ED3C20C7BBD2009E400E /* ProjectHelper */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2173F84B20A2EE65000C2307 /* Project object */ = {
+		8095ED3420C7BBD2009E400E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = Daubert;
+				ORGANIZATIONNAME = "Jiang,Zhenhua";
 				TargetAttributes = {
-					2173F85220A2EE65000C2307 = {
+					8095ED3B20C7BBD2009E400E = {
 						CreatedOnToolsVersion = 9.4;
 					};
 				};
 			};
-			buildConfigurationList = 2173F84E20A2EE65000C2307 /* Build configuration list for PBXProject "XcodeHelper" */;
+			buildConfigurationList = 8095ED3720C7BBD2009E400E /* Build configuration list for PBXProject "ProjectHelper" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 2173F84A20A2EE65000C2307;
-			productRefGroup = 2173F85420A2EE65000C2307 /* Products */;
+			mainGroup = 8095ED3320C7BBD2009E400E;
+			productRefGroup = 8095ED3D20C7BBD2009E400E /* Products */;
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 8095ECE120C6BE14009E400E /* Products */;
-					ProjectRef = 8095ECE020C6BE14009E400E /* XcodeEditor.xcodeproj */;
+					ProductGroup = 8095ED4A20C7C814009E400E /* Products */;
+					ProjectRef = 8095ED4920C7C814009E400E /* XcodeEditor.xcodeproj */;
 				},
 			);
 			projectRoot = "";
 			targets = (
-				2173F85220A2EE65000C2307 /* XcodeHelper */,
+				8095ED3B20C7BBD2009E400E /* ProjectHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		8095ECE620C6BE14009E400E /* XcodeEditor.framework */ = {
+		8095ED4F20C7C814009E400E /* XcodeEditor.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = XcodeEditor.framework;
-			remoteRef = 8095ECE520C6BE14009E400E /* PBXContainerItemProxy */;
+			remoteRef = 8095ED4E20C7C814009E400E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		8095ECE820C6BE14009E400E /* XcodeEditorTests.xctest */ = {
+		8095ED5120C7C814009E400E /* XcodeEditorTests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = XcodeEditorTests.xctest;
-			remoteRef = 8095ECE720C6BE14009E400E /* PBXContainerItemProxy */;
+			remoteRef = 8095ED5020C7C814009E400E /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2173F84F20A2EE65000C2307 /* Sources */ = {
+		8095ED3820C7BBD2009E400E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2173F85720A2EE65000C2307 /* main.m in Sources */,
-				215BCE1A20A41DCF007AB4C2 /* RNCarthageHelper.m in Sources */,
-				8095ECEC20C6BEB2009E400E /* RNSubmoduleHelper.m in Sources */,
-				215BCE0720A3F961007AB4C2 /* RNProjectConfig.m in Sources */,
+				8095ED4020C7BBD2009E400E /* main.swift in Sources */,
+				8095ED5820C7D873009E400E /* RNSubmoduleHelper.swift in Sources */,
+				8095ED5620C7C8F6009E400E /* RNProjectConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		2173F85820A2EE65000C2307 /* Debug */ = {
+		8095ED4120C7BBD2009E400E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -271,10 +262,12 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
-		2173F85920A2EE65000C2307 /* Release */ = {
+		8095ED4220C7BBD2009E400E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -322,53 +315,55 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
 			name = Release;
 		};
-		2173F85B20A2EE65000C2307 /* Debug */ = {
+		8095ED4420C7BBD2009E400E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCU9L9SQC4;
-				FRAMEWORK_SEARCH_PATHS = "${BUILD_DIR}/${CONFIGURATION}/**";
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
+				FRAMEWORK_SEARCH_PATHS = "${BUILD_DIR}/${CONFIGURATION}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
-		2173F85C20A2EE65000C2307 /* Release */ = {
+		8095ED4520C7BBD2009E400E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TCU9L9SQC4;
-				FRAMEWORK_SEARCH_PATHS = "${BUILD_DIR}/${CONFIGURATION}/**";
-				LD_RUNPATH_SEARCH_PATHS = "@executable_path";
+				FRAMEWORK_SEARCH_PATHS = "${BUILD_DIR}/${CONFIGURATION}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2173F84E20A2EE65000C2307 /* Build configuration list for PBXProject "XcodeHelper" */ = {
+		8095ED3720C7BBD2009E400E /* Build configuration list for PBXProject "ProjectHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2173F85820A2EE65000C2307 /* Debug */,
-				2173F85920A2EE65000C2307 /* Release */,
+				8095ED4120C7BBD2009E400E /* Debug */,
+				8095ED4220C7BBD2009E400E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2173F85A20A2EE65000C2307 /* Build configuration list for PBXNativeTarget "XcodeHelper" */ = {
+		8095ED4320C7BBD2009E400E /* Build configuration list for PBXNativeTarget "ProjectHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2173F85B20A2EE65000C2307 /* Debug */,
-				2173F85C20A2EE65000C2307 /* Release */,
+				8095ED4420C7BBD2009E400E /* Debug */,
+				8095ED4520C7BBD2009E400E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 2173F84B20A2EE65000C2307 /* Project object */;
+	rootObject = 8095ED3420C7BBD2009E400E /* Project object */;
 }
