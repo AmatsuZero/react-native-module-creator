@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		803838E720E4CAFA00560D4D /* RNCocoapodsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803838E620E4CAFA00560D4D /* RNCocoapodsHelper.swift */; };
+		803838F020E4FB7A00560D4D /* ParserUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803838EF20E4FB7A00560D4D /* ParserUnitTest.swift */; };
+		803838F920E4FC5600560D4D /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 803838F820E4FC5600560D4D /* Podfile */; };
+		803838FA20E5007800560D4D /* RNCocoapodsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 803838E620E4CAFA00560D4D /* RNCocoapodsHelper.swift */; };
+		803838FB20E5007C00560D4D /* RNSubmoduleHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8095ED5720C7D873009E400E /* RNSubmoduleHelper.swift */; };
+		803838FC20E5008000560D4D /* RNProjectConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8095ED5520C7C8F6009E400E /* RNProjectConfig.swift */; };
+		803838FD20E5008300560D4D /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8095ED3F20C7BBD2009E400E /* main.swift */; };
+		803838FE20E5008900560D4D /* RNProjectBuildHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80605CE920C94AA8006ADBB1 /* RNProjectBuildHelper.swift */; };
+		80605CEA20C94AA8006ADBB1 /* RNProjectBuildHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80605CE920C94AA8006ADBB1 /* RNProjectBuildHelper.swift */; };
 		8095ED4020C7BBD2009E400E /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8095ED3F20C7BBD2009E400E /* main.swift */; };
 		8095ED4820C7C808009E400E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8095ED4720C7C808009E400E /* Foundation.framework */; };
 		8095ED5320C7C882009E400E /* XcodeEditor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8095ED4F20C7C814009E400E /* XcodeEditor.framework */; };
@@ -44,6 +53,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		803838E620E4CAFA00560D4D /* RNCocoapodsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNCocoapodsHelper.swift; sourceTree = "<group>"; };
+		803838ED20E4FB7A00560D4D /* ParserUnitTest.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ParserUnitTest.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		803838EF20E4FB7A00560D4D /* ParserUnitTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserUnitTest.swift; sourceTree = "<group>"; };
+		803838F120E4FB7A00560D4D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		803838F820E4FC5600560D4D /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		80605CE920C94AA8006ADBB1 /* RNProjectBuildHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RNProjectBuildHelper.swift; sourceTree = "<group>"; };
 		8095ED3C20C7BBD2009E400E /* ProjectHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = ProjectHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		8095ED3F20C7BBD2009E400E /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		8095ED4720C7C808009E400E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -53,6 +68,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		803838EA20E4FB7A00560D4D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8095ED3920C7BBD2009E400E /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -65,10 +87,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		803838EE20E4FB7A00560D4D /* ParserUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				803838F720E4FBC800560D4D /* Resource */,
+				803838EF20E4FB7A00560D4D /* ParserUnitTest.swift */,
+				803838F120E4FB7A00560D4D /* Info.plist */,
+			);
+			path = ParserUnitTest;
+			sourceTree = "<group>";
+		};
+		803838F720E4FBC800560D4D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				803838F820E4FC5600560D4D /* Podfile */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		807D364820E4B15E00A4EC25 /* Cocoapods */ = {
+			isa = PBXGroup;
+			children = (
+				803838E620E4CAFA00560D4D /* RNCocoapodsHelper.swift */,
+			);
+			path = Cocoapods;
+			sourceTree = "<group>";
+		};
 		8095ED3320C7BBD2009E400E = {
 			isa = PBXGroup;
 			children = (
 				8095ED3E20C7BBD2009E400E /* ProjectHelper */,
+				803838EE20E4FB7A00560D4D /* ParserUnitTest */,
 				8095ED3D20C7BBD2009E400E /* Products */,
 				8095ED4620C7C807009E400E /* Frameworks */,
 			);
@@ -78,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8095ED3C20C7BBD2009E400E /* ProjectHelper */,
+				803838ED20E4FB7A00560D4D /* ParserUnitTest.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,9 +135,11 @@
 		8095ED3E20C7BBD2009E400E /* ProjectHelper */ = {
 			isa = PBXGroup;
 			children = (
+				807D364820E4B15E00A4EC25 /* Cocoapods */,
 				8095ED5420C7C8CF009E400E /* GitSubmodule */,
 				8095ED3F20C7BBD2009E400E /* main.swift */,
 				8095ED5520C7C8F6009E400E /* RNProjectConfig.swift */,
+				80605CE920C94AA8006ADBB1 /* RNProjectBuildHelper.swift */,
 			);
 			path = ProjectHelper;
 			sourceTree = "<group>";
@@ -121,6 +173,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		803838EC20E4FB7A00560D4D /* ParserUnitTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 803838F620E4FB7A00560D4D /* Build configuration list for PBXNativeTarget "ParserUnitTest" */;
+			buildPhases = (
+				803838E920E4FB7A00560D4D /* Sources */,
+				803838EA20E4FB7A00560D4D /* Frameworks */,
+				803838EB20E4FB7A00560D4D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ParserUnitTest;
+			productName = ParserUnitTest;
+			productReference = 803838ED20E4FB7A00560D4D /* ParserUnitTest.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		8095ED3B20C7BBD2009E400E /* ProjectHelper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8095ED4320C7BBD2009E400E /* Build configuration list for PBXNativeTarget "ProjectHelper" */;
@@ -144,10 +213,14 @@
 		8095ED3420C7BBD2009E400E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0940;
+				DefaultBuildSystemTypeForWorkspace = Original;
+				LastSwiftUpdateCheck = 1000;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Jiang,Zhenhua";
 				TargetAttributes = {
+					803838EC20E4FB7A00560D4D = {
+						CreatedOnToolsVersion = 10.0;
+					};
 					8095ED3B20C7BBD2009E400E = {
 						CreatedOnToolsVersion = 9.4;
 					};
@@ -172,6 +245,7 @@
 			projectRoot = "";
 			targets = (
 				8095ED3B20C7BBD2009E400E /* ProjectHelper */,
+				803838EC20E4FB7A00560D4D /* ParserUnitTest */,
 			);
 		};
 /* End PBXProject section */
@@ -193,13 +267,39 @@
 		};
 /* End PBXReferenceProxy section */
 
+/* Begin PBXResourcesBuildPhase section */
+		803838EB20E4FB7A00560D4D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				803838F920E4FC5600560D4D /* Podfile in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		803838E920E4FB7A00560D4D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				803838F020E4FB7A00560D4D /* ParserUnitTest.swift in Sources */,
+				803838FD20E5008300560D4D /* main.swift in Sources */,
+				803838FE20E5008900560D4D /* RNProjectBuildHelper.swift in Sources */,
+				803838FC20E5008000560D4D /* RNProjectConfig.swift in Sources */,
+				803838FB20E5007C00560D4D /* RNSubmoduleHelper.swift in Sources */,
+				803838FA20E5007800560D4D /* RNCocoapodsHelper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8095ED3820C7BBD2009E400E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80605CEA20C94AA8006ADBB1 /* RNProjectBuildHelper.swift in Sources */,
 				8095ED4020C7BBD2009E400E /* main.swift in Sources */,
 				8095ED5820C7D873009E400E /* RNSubmoduleHelper.swift in Sources */,
+				803838E720E4CAFA00560D4D /* RNCocoapodsHelper.swift in Sources */,
 				8095ED5620C7C8F6009E400E /* RNProjectConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -207,6 +307,43 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		803838F220E4FB7A00560D4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
+				INFOPLIST_FILE = ParserUnitTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				PRODUCT_BUNDLE_IDENTIFIER = com.daubert.UnitTest.ParserUnitTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		803838F320E4FB7A00560D4D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = TCU9L9SQC4;
+				INFOPLIST_FILE = ParserUnitTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.daubert.UnitTest.ParserUnitTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 		8095ED4120C7BBD2009E400E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -345,6 +482,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		803838F620E4FB7A00560D4D /* Build configuration list for PBXNativeTarget "ParserUnitTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				803838F220E4FB7A00560D4D /* Debug */,
+				803838F320E4FB7A00560D4D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		8095ED3720C7BBD2009E400E /* Build configuration list for PBXProject "ProjectHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
